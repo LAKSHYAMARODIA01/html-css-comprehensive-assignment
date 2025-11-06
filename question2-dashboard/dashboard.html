@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <h2>AdminPanel</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+          <li><i class="fas fa-users"></i> Users</li>
+          <li><i class="fas fa-box"></i> Products</li>
+          <li><i class="fas fa-chart-bar"></i> Analytics</li>
+          <li><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <button><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Dashboard Overview</h1>
+        <div class="search">
+          <input type="text" placeholder="Search here...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="profile">
+          <img src="images/team-photos/member1.jpg" alt="Admin">
+          <span>Admin</span>
+        </div>
+      </header>
+
+      <!-- Stats Section -->
+      <section class="stats">
+        <div class="card">
+          <i class="fas fa-users"></i>
+          <div>
+            <h3>1,250</h3>
+            <p>Total Users</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-box"></i>
+          <div>
+            <h3>340</h3>
+            <p>Products</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-shopping-cart"></i>
+          <div>
+            <h3>875</h3>
+            <p>Orders</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-dollar-sign"></i>
+          <div>
+            <h3>$12,540</h3>
+            <p>Revenue</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Orders Table -->
+      <section class="table-section">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1023</td>
+              <td>Rahul Sharma</td>
+              <td>Wireless Mouse</td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td>06 Nov 2025</td>
+            </tr>
+            <tr>
+              <td>#1024</td>
+              <td>Priya Verma</td>
+              <td>Bluetooth Speaker</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>06 Nov 2025</td>
+            </tr>
+            <tr>
+              <td>#1025</td>
+              <td>Amit Kumar</td>
+              <td>Smartwatch</td>
+              <td><span class="status canceled">Canceled</span></td>
+              <td>05 Nov 2025</td>
+            </tr>
+            <tr>
+              <td>#1026</td>
+              <td>Neha Singh</td>
+              <td>Laptop Bag</td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td>05 Nov 2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Product Management Form -->
+      <section class="form-section">
+        <h2>Add New Product</h2>
+        <form>
+          <div class="form-group">
+            <label for="pname">Product Name</label>
+            <input type="text" id="pname" placeholder="Enter product name" required>
+          </div>
+          <div class="form-group">
+            <label for="pprice">Price ($)</label>
+            <input type="number" id="pprice" placeholder="Enter price" required>
+          </div>
+          <div class="form-group">
+            <label for="pdesc">Description</label>
+            <textarea id="pdesc" rows="3" placeholder="Enter description"></textarea>
+          </div>
+          <button type="submit" class="add-btn">Add Product</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>© 2025 Admin Dashboard. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
